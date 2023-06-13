@@ -1,11 +1,9 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+permissions: {}
 jobs:
   check-bats-version:
-    permissions:
-      actions: none
-      contents: none
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,5 +18,5 @@ jobs:
       #        -H "Authorization: Bearer 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"\
       #        -H "X-GitHub-Api-Version: 2022-11-28" \
       #        https://api.github.com/repos/198684x/test_repo/collaborators/198684x/permission
-      - run: git tag test_repo5
+      - run: git tag test_repo6
       - run: git describe --tags
