@@ -13,7 +13,8 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: curl -L \
+      - run: |
+             curl -L \
              -H "Accept: application/vnd.github+json" \
              -H "Authorization: Bearer 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"\
              -H "X-GitHub-Api-Version: 2022-11-28" \
